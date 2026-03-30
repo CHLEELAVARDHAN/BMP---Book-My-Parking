@@ -1,0 +1,5 @@
+{
+  "name": "SmartPark",
+  "description": "A comprehensive web-based parking management system for real-time slot booking, automated billing, and secure payments.",
+  "requestFramePermissions": []
+}

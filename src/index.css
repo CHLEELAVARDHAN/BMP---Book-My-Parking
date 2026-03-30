@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply antialiased transition-colors duration-300;
+  }
+}
+
+.dark {
+  background-color: #ffffff;
+  color: #000000;
+  --glow-text-color: 0 0 25px rgba(0,0,0,0.6);
+  --glow-box-color: 0 0 50px rgba(0,0,0,0.3);
+  --glow-button-color: 0 0 25px rgba(0,0,0,0.5);
+}
+
+.light {
+  background-color: #000000;
+  color: #ffffff;
+  --glow-text-color: 0 0 25px rgba(255,255,255,0.6);
+  --glow-box-color: 0 0 50px rgba(255,255,255,0.3);
+  --glow-button-color: 0 0 25px rgba(255,255,255,0.5);
+}
+
+@layer utilities {
+  .glow-text {
+    text-shadow: var(--glow-text-color);
+  }
+  .glow-box {
+    box-shadow: var(--glow-box-color);
+  }
+  .glow-button {
+    box-shadow: var(--glow-button-color);
+  }
+}
